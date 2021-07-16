@@ -108,33 +108,5 @@ create or replace PACKAGE         PCK_PBX AS
     
     FUNCTION FN_UPDATE_TRUNK_U2000_MIDDB (VI_USERNAME VARCHAR2, VI_PASSWORD VARCHAR2, VI_IP_INFO VARCHAR2, VI_T_USERNAME VARCHAR2, VI_T_NEW_USERNAME VARCHAR2, VO_RESULT OUT NUMBER, VO_MESSAGE OUT VARCHAR2)
     RETURN NUMBER;
-    
-    FUNCTION fn_get_trunk_u2000
-    (
-        vi_username    VARCHAR2,
-        vi_password    VARCHAR2,
-        vi_ip_info     VARCHAR2,
-        vi_t_username  VARCHAR2,
-        vo_message     OUT  VARCHAR2,
-        vo_result      OUT  NUMBER
-        
-    ) RETURN NUMBER;
-
-    FUNCTION fn_add_trunk_u2000
-    (
-        vi_username    VARCHAR2,
-        vi_password    VARCHAR2,
-        vi_ip_info     VARCHAR2,
-        vi_t_username  VARCHAR2,
-        vo_message     OUT  VARCHAR2,
-        vo_result      OUT  NUMBER
-        
-    ) RETURN NUMBER;
-    
-    FUNCTION FN_SSH_CONNECT (INPUTS VARCHAR2)
-    RETURN VARCHAR2;
-   
-   FUNCTION FN_DELETE_TRUNK_U2000 (VI_USERNAME IN VARCHAR2, VI_PASSWORD IN VARCHAR2, VI_IP_INFO IN VARCHAR2, VI_T_USERNAME IN VARCHAR2, VO_MESSAGE OUT VARCHAR2, VO_RESULT OUT INT) 
-   RETURN NUMBER;
      
 END PCK_PBX;
